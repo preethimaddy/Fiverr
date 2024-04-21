@@ -1,10 +1,11 @@
 
 import './App.css';
-import Ad from './pages/add/Ad';
+import  Navbar from './components/navbar/Navbar'
 function App() {
   return (
   <>
-<Ad />
+
+<Navbar />
 </>
       
 
