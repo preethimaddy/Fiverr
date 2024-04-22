@@ -1,5 +1,6 @@
 .navbar{
 display:flex;
+flex-direction: column;
 justify-content: centre;
 background-color: #013914;
 color:white;
@@ -23,18 +24,26 @@ color: #1dbf1d ;
     display:flex;
     align-items: centre;
          gap: 24px;
+         font-family: "Montserrat", sans-serif;
     .button{
-color: white;
+        color: white;
 padding:10px 20px;
 border-radius: 5px;
 border :1px solid white;
 cursor: pointer;
 background-color: transparent;
+
+&:hover {
+    background-color: #1dbf73;
+    border-color: #1dbf73;
+}
     }
 }
     }
 }
 
-
+.menu {
+    width: 1400 px;
+}
 
 

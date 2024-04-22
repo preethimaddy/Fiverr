@@ -17,9 +17,19 @@ const Navbar = () => {
                    <span>Become a Seller</span>
                    <button>Join</button>
                     </div>
+                            
         </div>
+        <hr />
+         <div className="menu">
+  
+                            <span>Test</span>
+                            <span>Test2</span>
+                        </div>
+        <div>
+                    </div>
     </div>
     
+  
     </>
   )
 }
