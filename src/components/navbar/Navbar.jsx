@@ -1,9 +1,23 @@
-import React from 'react'
+import {useState,useEffect} from 'react'
 import "./Navbar.scss"
 const Navbar = () => {
+
+  const[active, setactive] = useState(false)
+
+  const isActive = ()=>{
+    window.scrollY > 0 ? setactive(true) : setactive(false)
+  }
+
+  useEffect (()=>{
+    window.addEventListener("scroll", isActive);
+
+    return ()=>{
+      window.removeEventListener('scroll',isActive)
+    }
+  },[])
   return (
     <>
-    <div className="navbar">
+    <div className={active ? "navbar active":"navbar"}>
         <div className="container">
             <div className="logo">
                <span className='text'>Fiverr</span>
@@ -19,12 +33,18 @@ const Navbar = () => {
                     </div>
                             
         </div>
-        <hr />
+        {active && (
+           <>
+       <hr />
          <div className="menu">
   
                             <span>Test</span>
                             <span>Test2</span>
-                        </div>
+                        </div></>
+        )
+
+        }
+      
         <div>
                     </div>
     </div>
