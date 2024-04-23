@@ -32,6 +32,42 @@ color: #1dbf1d ;
     align-items: centre;
          gap: 24px;
          font-family: "Montserrat", sans-serif;
+
+
+         .user{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            cursor:pointer;
+                .img{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .options{
+                    position:absolute;
+                    top:50px;
+                    right:0;
+                    padding: 20px;
+                    background-color: white;
+                    border:10px;
+                    border:1px solid light;
+                    display:flex;
+                    flex-direction: column;
+                    gap: 10px; 
+                    color: gray;
+                    width: 200px;
+                    font-weight: 300;
+
+                    &:hover {
+                        color: #181919;
+                        border-color: #313734;
+                    }
+
+                }
+         }
     .button{
         color: white;
 padding:10px 20px;

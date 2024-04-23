@@ -3,7 +3,7 @@ import "./Navbar.scss"
 const Navbar = () => {
 
   const[active, setactive] = useState(false)
-
+  const[open, setOpen] = useState(false)
   const isActive = ()=>{
     window.scrollY > 0 ? setactive(true) : setactive(false)
   }
@@ -15,6 +15,15 @@ const Navbar = () => {
       window.removeEventListener('scroll',isActive)
     }
   },[])
+const currentUser = {
+  id:1,
+  username: "john Doe",
+  isSeller:true
+}
+
+
+
+
   return (
     <>
     <div className={active ? "navbar active":"navbar"}>
@@ -28,8 +37,27 @@ const Navbar = () => {
                    <span>Explore</span>
                    <span>English</span>
                    <span>sign in</span>
-                   <span>Become a Seller</span>
-                   <button>Join</button>
+                  {!currentUser?.isSeller && <span>Become a Seller</span>}
+                   {!currentUser &&<button>Join</button>}
+                   <div className="user" onClick={()=>setOpen(!open)}>
+                    <img src=''
+                     alt=''/>
+                    <span>{currentUser?.username}</span>
+                  {open &&
+                    <div className="options">
+                    {currentUser?.isSeller && (
+                      <>
+                      <span>Gigs</span>
+                      <span>Add new Gigs</span>
+                      </>
+                     
+                    )}
+                     <span>orders</span>
+                     <span>Messages</span>
+                     <span>Logout</span>
+                  </div>
+                  }  
+                   </div>
                     </div>
                             
         </div>
