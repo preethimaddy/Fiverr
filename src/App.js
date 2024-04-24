@@ -1,29 +1,81 @@
 
 import './App.css';
-import  Navbar from './components/navbar/Navbar'
+import  Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
+import Home from "./pages/home/Home";
+import Login from "./pages/login/Login";
+import Register from "./pages/register/Register";
+import Ad from "./pages/add/Ad";
+import Orders from "./pages/orders/Orders";
+import Messages from "./pages/messages/Messages";
+import Message from "./pages/message/Message";
+import Gigs from "./pages/gigs/Gigs";
+import Gig from "./pages/gig/Gig";
+import MyGigs from "./pages/mygigs/MyGigs"
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 function App() {
-  return (
-  <>
-
-<Navbar />
-
-<h1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-   in culpa qui officia deserunt mollit anim id est laborum."</h1>
-<h1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-   in culpa qui officia deserunt mollit anim id est laborum."</h1>
-   <h1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-    sunt in culpa qui officia deserunt mollit anim id est laborum."</h1>
-    <h1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-   in culpa qui officia deserunt mollit anim id est laborum."</h1>
-<h1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-   in culpa qui officia deserunt mollit anim id est laborum."</h1>
-   <h1>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-    sunt in culpa qui officia deserunt mollit anim id est laborum."</h1>
-   </>
-      
-
+   const Layout = () => {
+     return (
+       <div className="app">
+         <Navbar />
+         <Outlet />
+         <Footer />
+       </div>
+     );
+   };
+ 
+   const router = createBrowserRouter([
+     {
+       path: "/",
+       element: <Layout />,
+       children: [
+         {
+           path: "/",
+           element: <Home />,
+         },
    
-  );
-}
+         {
+           path: "/orders",
+           element: <Orders />,
+         },
+         {
+           path: "/messages",
+           element: <Messages />,
+         },
+         {
+           path: "/message/:id",
+           element: <Message />,
+         },
+         {
+           path: "/add",
+           element: <Ad />,
+         },
+         {
+            path: "/gig",
+            element: <Gig />,
+          },
+         {
+            path: "/gigs",
+            element: <Gigs />,
+          },
+          {
+            path: "/myGigs",
+            element: <MyGigs />,
+          },
+       
+       ],
+     },
+     {
+       path: "/register",
+       element: <Register />,
+     },
+     {
+       path: "/login",
+       element: <Login />,
+     },
+   ]);
+ 
+   return <RouterProvider router={router} />;
+ }
 
 export default App;

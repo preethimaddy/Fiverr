@@ -1,5 +1,6 @@
 import {useState,useEffect} from 'react'
 import "./Navbar.scss"
+import { Link } from 'react-router-dom'
 const Navbar = () => {
 
   const[active, setactive] = useState(false)
@@ -47,14 +48,14 @@ const currentUser = {
                     <div className="options">
                     {currentUser?.isSeller && (
                       <>
-                      <span>Gigs</span>
-                      <span>Add new Gigs</span>
+                      <Link className="links" to="./gigs">Gigs</Link>
+                      <Link className="links" to="./gigs">Add new Gigs</Link>
                       </>
                      
                     )}
-                     <span>orders</span>
-                     <span>Messages</span>
-                     <span>Logout</span>
+                     <Link className="links" to="./orders">orders</Link>
+                     <Link className="links" to="./Messages">Messages</Link>
+                     <Link className="links" to="/">Logout</Link>
                   </div>
                   }  
                    </div>
