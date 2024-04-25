@@ -5,7 +5,7 @@ const Featured = () => {
     <div className='featured'>
         <div className="container">
             <div className="left">
-                <h1>Find the freelance service of your choice</h1>
+                <h1>Find the <i>freelance</i> service of your choice</h1>
                 <div className="search">
                     <div className="searchInput">
                         <img  src='./search.png' alt=''/>
