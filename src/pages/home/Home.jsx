@@ -4,7 +4,8 @@ import Slide from '../../components/slide/Slide'
 import Featured from '../../components/featured/Featured'
 import TrustedBy from '../../components/trustedby/TrustedBy'
 import CatCard from '../../components/catCard/CatCard'
-import {cards} from '../../data'
+import {cards,projects} from '../../data'
+import ProjectCard from '../../components/projectCard/ProjectCard'
 const Home = () => {
   return (
  
@@ -82,9 +83,7 @@ const Home = () => {
           </div>
           <div className="item">
           <video src='./video.mp4' controls></video>
-          </div>
-  </div>
-</div>
+ 
 <div className="features" dark>
   <div className="container">
     <h1>Fiverr Business</h1>
@@ -101,6 +100,18 @@ const Home = () => {
               until you approve the work.</p>
   </div>
   <button type='button' className='button'>Explore fiver business</button>
+</div>
+<div className="item">
+  <img src='https://images.pexels.com/photos/580151/pexels-photo-580151.jpeg?auto=compress&cs=tinysrgb&w=1600' alt='' />
+</div>
+</div>
+  </div>
+  <Slide slidesToShow={5} arrowScroll={4}>
+
+          {projects.map(card=>(
+            <ProjectCard key={card.id} item={card}/>
+          ))}
+        </Slide>
 </div>
 </>
   );

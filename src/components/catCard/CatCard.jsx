@@ -5,7 +5,7 @@ const CatCard = ({item}) => {
   return (
    <Link >
    <div className="catCard">
-  <img  src='item.img' to='/gigs?cat=design' alt=''/>
+  <img  src={item.card} to='/gigs?cat=design' alt=''/>
   <span className='desc'>{item.desc}</span>
   <span className='title'>{item.title}</span>
    </div>
