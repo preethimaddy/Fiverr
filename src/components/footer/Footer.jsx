@@ -80,14 +80,14 @@ const Footer = () => {
             <img src="/flipkart.jpg" alt="" />
           </div>
           <div className="link">
-            <img src="" alt="" />
+            <img src="/english.jpg" alt="" />
             <span>English</span>
           </div>
           <div className="link">
-            <img src="" alt="" />
+            <img src="/dollar.jpg" alt="" />
             <span>USD</span>
           </div>
-          <img src="" alt="" />
+          <img src="/isd.jpg" alt="" />
           <span>ISD</span>
         </div>
       </div>
