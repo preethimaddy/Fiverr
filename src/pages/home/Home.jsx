@@ -151,7 +151,7 @@ function Home() {
         <div className="container">
           <div className="item">
             <h1>
-              liverr <i>business</i>
+              Fiverr <i>business</i>
             </h1>
             <h1>
               A business solution designed for <i>teams</i>
@@ -174,7 +174,7 @@ function Home() {
               <img src="./img/check.png" alt="" />
               Manage teamwork and boost productivity with one powerful workspace
             </div>
-            <button  type='button' className='button'>Explore Liverr Business</button>
+            <button  type='button' className='button'>Explore Fiverr Business</button>
           </div>
           <div className="item">
             <img
@@ -184,7 +184,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <Slide slidesToShow={4} arrowsScroll={4}>
+      <Slide slidesToShow={2} arrowsScroll={2}>
         {projects.map((card) => (
           <ProjectCard key={card.id} card={card} />
         ))}
