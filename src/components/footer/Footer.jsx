@@ -84,7 +84,7 @@ const Footer = () => {
             <span>English</span>
           </div>
           <div className="link">
-            <img src="/" alt="" />
+            <img src="/coin.png" alt="" />
             <span>USD</span>
           </div>
           <img src="accessibility.png" alt="" />
