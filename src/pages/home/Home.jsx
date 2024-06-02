@@ -6,6 +6,7 @@ import Slide from '../../components/slide/Slide';
 import CatCard from '../../components/catCard/CatCard';
 import ProjectCard from '../../components/projectCard/ProjectCard';
 import { cards, projects } from '../../data';
+import Gigs from "../gigs/Gigs";
 
 function Home() {
   return ( 
@@ -184,11 +185,14 @@ function Home() {
           </div>
         </div>
       </div>
-      <Slide slidesToShow={5} arrowsScroll={5}>
+      <hr />
+      <Gigs />
+      <Slide slidesToShow={4} arrowsScroll={4}>
         {projects.map((card) => (
           <ProjectCard key={card.id} item={card} />
         ))}
       </Slide>
+     
     </div>
   );
 }
