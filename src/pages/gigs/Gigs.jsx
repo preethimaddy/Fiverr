@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 import './Gigs.scss'
+import {gigs} from '../../data'
+import GigCard from '../../components/gigCard/GigCard';
 const Gigs = () => {
   const [sort, setSort] = useState("sales");
   const [open, setOpen] = useState(false);
@@ -31,14 +33,19 @@ const reSort =(type) =>{
         {
           open &&( 
           <div className="rightmenu">
-           { sort === "sales" ? ( <span onClick={()=>reSort("createdAt")}>Newest</span>) :
+           { sort === "sales" ? ( <span onClick={()=>reSort("createdAt")}>Newest</span> ) :(
          
-          (<span onClick={()=>reSort("sales")}>Best Seller</span>)
+          <span onClick={()=>reSort("sales")}>Best Seller</span>)
         }
         </div>)
         }
       
           </div>
+        </div>
+        <div className="cards">
+        {gigs.map(gig=>(
+            <GigCard key={gig.id} item={gig}/>
+          ))}
         </div>
       </div>
     </div>

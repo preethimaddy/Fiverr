@@ -3,25 +3,33 @@ import "./GigCard.scss"
 import { Link } from 'react-router-dom'
 const GigCard = ({item}) => {
   return (
-<Link to='/gig/123'>
+<Link to='/gig/123'  className="link">
 <div className="gigCard">
 <img  src={item.img} alt =''/>
   <div className="info">
     <div className="user">
     <img  src={item.pp} alt =''/>
-<p>{item.username}</p>
+<span>{item.username}</span>
     </div>
+    <p>{item.desc}</p>
     <div className="star">
-    <img  src='./star.png' alt =''/>
+    <img  src='./img/star.png' alt =''/>
 <span>{item.star}</span>
     </div>
   </div>
-  <div className="details"></div>
-  <img  src='./heart.png' alt =''/>                              
+  <hr />
+  <div className="detail">
+  <img  src='./img/heart.png' alt =''/>                              
+ 
+  <div className="price">
   <span>STARTING AT</span>
-  <h2>${item.price}</h2>
+  <h2>${item.price}
+  <sup>99</sup>
+  </h2>
+  </div>
+  
 </div>
-
+</div>
 </Link>
     
   )
