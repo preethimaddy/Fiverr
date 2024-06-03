@@ -7,6 +7,7 @@ import CatCard from '../../components/catCard/CatCard';
 
 import { cards } from '../../data';
 import Gigs from "../gigs/Gigs";
+import Gig from "../gig/Gig";
 
 function Home() {
   return ( 
@@ -187,7 +188,7 @@ function Home() {
       </div>
       <hr />
       <Gigs />
-     
+     <Gig />
      
     </div>
   );

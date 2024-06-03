@@ -46,6 +46,7 @@ const reSort =(type) =>{
         {gigs.map(gig=>(
             <GigCard key={gig.id} item={gig}/>
           ))}
+         
         </div>
       </div>
     </div>
