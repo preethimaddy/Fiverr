@@ -49,7 +49,7 @@ const currentUser = {
                     {currentUser?.isSeller && (
                       <>
                       <Link className="links" to="./gigs">Gigs</Link>
-                      <Link className="links" to="./gig">Add new Gigs</Link>
+                      <Link className="links" to="./add">Add new Gigs</Link>
                       </>
                      
                     )}
