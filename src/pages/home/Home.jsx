@@ -5,10 +5,7 @@ import TrustedBy from '../../components/trustedby/TrustedBy'
 import Slide from '../../components/slide/Slide';
 import CatCard from '../../components/catCard/CatCard';
 import { cards } from '../../data';
-import Gigs from "../gigs/Gigs";
-import Gig from "../gig/Gig";
-import MyGigs from "../mygigs/MyGigs";
-import Message from "../message/Message";
+
 
 function Home() {
   return ( 
@@ -188,10 +185,10 @@ function Home() {
         </div>
       </div>
       <hr />
-      <Gigs />
+      {/* <Gigs />
      <Gig />
      <MyGigs />
-     <Message />
+     <Message /> */}
     </div>
   );
 }
