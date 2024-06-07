@@ -7,6 +7,7 @@ import CatCard from '../../components/catCard/CatCard';
 import { cards } from '../../data';
 
 
+
 function Home() {
   return ( 
     <div className="home">
@@ -189,6 +190,7 @@ function Home() {
      <Gig />
      <MyGigs />
      <Message /> */}
+     
     </div>
   );
 }

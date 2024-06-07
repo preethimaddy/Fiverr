@@ -36,7 +36,7 @@ const Messages = () => {
            
             <td>Bency</td>
       <td><Link to="/message/123" className='link'>{message.substring(0,100)}...</Link></td>
-      <td>1 day ago</td>
+      <td>2 days ago</td>
       <td>
         <button>Mark as Read</button>
       </td>
@@ -45,7 +45,7 @@ const Messages = () => {
            
            <td>Lama Dev</td>
      <td><Link to="/message/123" className='link'>{message.substring(0,100)}...</Link></td>
-     <td>1 day ago</td>
+     <td>2 days ago</td>
      <td>
        <button>Mark as Read</button>
      </td>
@@ -54,7 +54,7 @@ const Messages = () => {
            
            <td>Fernandis</td>
      <td><Link to="/message/123" className='link'>{message.substring(0,100)}...</Link></td>
-     <td>1 day ago</td>
+     <td>3 days ago</td>
      <td>
        <button>Mark as Read</button>
      </td>
@@ -63,7 +63,7 @@ const Messages = () => {
            
            <td>Jacob</td>
      <td><Link to="/message/123" className='link'>{message.substring(0,100)}...</Link></td>
-     <td>1 day ago</td>
+     <td>4 days ago</td>
      <td>
        <button>Mark as Read</button>
      </td>
@@ -72,7 +72,7 @@ const Messages = () => {
            
            <td>Leo</td>
      <td><Link to="/message/123" className='link'>{message.substring(0,100)}...</Link></td>
-     <td>1 day ago</td>
+     <td>10 days ago</td>
      <td>
        <button>Mark as Read</button>
      </td>
